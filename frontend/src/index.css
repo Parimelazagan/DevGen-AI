@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply m-0 min-w-[320px] bg-[#fafafa] text-[#090909]; font-family: 'Manrope', sans-serif; }
+  button, input, textarea, select { font: inherit; }
+  button { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer components {
+  .shell { @apply min-h-screen bg-[#fafafa]; }
+  .page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .nav { @apply sticky top-0 z-30 border-b border-neutral-200/80 bg-white/95 backdrop-blur; }
+  .brand { @apply flex items-center gap-2 text-xl font-extrabold tracking-[-0.04em]; }
+  .brand-mark { @apply grid h-7 w-7 place-items-center rounded-sm bg-black font-mono text-xs text-white; }
+  .nav-link { @apply text-[11px] font-bold uppercase tracking-[.08em] text-neutral-500 transition hover:text-black; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-extrabold transition focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-45; }
+  .btn-dark { @apply bg-black text-white hover:bg-neutral-800; }
+  .btn-light { @apply border border-neutral-300 bg-white text-black hover:border-black; }
+  .field { @apply w-full rounded-md border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-neutral-300 focus:border-black focus:ring-1 focus:ring-black; }
+  .caption { @apply font-mono text-[10px] font-medium uppercase tracking-[.13em] text-neutral-500; }
+  .panel { @apply rounded-lg border border-neutral-200 bg-white shadow-[0_12px_30px_rgba(0,0,0,.035)]; }
+  .screen { @apply min-h-screen bg-[#171717] p-2 sm:p-5; background-image: radial-gradient(#555 0.7px, transparent 0.7px); background-size: 12px 12px; }
+  .screen-inner { @apply min-h-[calc(100vh-16px)] overflow-hidden rounded-lg bg-[#fafafa] sm:min-h-[calc(100vh-40px)]; }
+}

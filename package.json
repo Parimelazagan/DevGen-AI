@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-generator-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise Monorepo for Portfolio Generator Application",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:server": "npm run dev --workspace=server",
+    "build:frontend": "npm run build --workspace=frontend",
+    "start:server": "npm start --workspace=server"
+  }
+}
